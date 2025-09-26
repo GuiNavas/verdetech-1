@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Conquistas - VERDETECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagens/logo.png" alt="Logo Verde Tech - Voltar ao Início" class="logo">
+            <a href="/admin" class="admin-secret-btn" title="Acesso Administrativo"></a>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link-standard">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="curiosidades.html" class="nav-link-standard">
+                <i class="fas fa-robot"></i>
+                <span>Curiosidades</span>
+            </a>
+            <a href="carbono.html" class="nav-link-standard">
+                <i class="fas fa-calculator"></i>
+                <span>Calculadora</span>
+            </a>
+            <a href="quiz.html" class="nav-link-standard">
+                <i class="fas fa-question"></i>
+                <span>Quiz</span>
+            </a>
+            <a href="/minha-conta" class="nav-link-standard">
+                <i class="fas fa-user-circle"></i>
+                <span>Minha conta</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="achievements-header">
+                <p>Complete desafios e desbloqueie conquistas para tornar sua jornada sustentável ainda mais divertida!</p>
+            </div>
+
+            <div class="achievements-stats">
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3 id="total-points">0</h3>
+                    <p>Pontos Totais</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-medal"></i>
+                    <h3 id="achievements-unlocked">0</h3>
+                    <p>Conquistas Desbloqueadas</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 id="progress-percentage">0%</h3>
+                    <p>Progresso Geral</p>
+                </div>
+            </div>
+
+            <div class="achievements-grid" id="achievements-container">
+                <!-- Conquistas serão carregadas via JavaScript -->
+            </div>
+
+            <div class="achievements-tips">
+                <h3><i class="fas fa-lightbulb"></i> Dicas para Desbloquear Mais Conquistas</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Calcule sua Pegada</h4>
+                        <p>Use a calculadora de carbono regularmente para acompanhar seu progresso.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>Teste seus Conhecimentos</h4>
+                        <p>Complete o quiz de sustentabilidade para ganhar pontos extras.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-compass"></i>
+                        <h4>Explore o Site</h4>
+                        <p>Visite todas as seções para descobrir novas funcionalidades.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-recycle"></i>
+                        <h4>Reduza seu Impacto</h4>
+                        <p>Implemente mudanças sustentáveis em sua rotina diária.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 VERDETECH. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="notifications.js"></script>
+    <script src="gamification.js"></script>
+    <script src="tutorial.js"></script>
+    <script src="admin-secret.js"></script>
+    <script src="conquistas.js"></script>
+</body>
+</html>
+

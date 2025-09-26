@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Admin - VERDETECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagens/logo.png" alt="Logo Verde Tech - Voltar ao Início" class="logo">
+            <a href="/admin" class="admin-secret-btn" title="Acesso Administrativo"></a>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link-standard">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="curiosidades.html" class="nav-link-standard">
+                <i class="fas fa-robot"></i>
+                <span>Curiosidades</span>
+            </a>
+            <a href="carbono.html" class="nav-link-standard">
+                <i class="fas fa-calculator"></i>
+                <span>Calculadora</span>
+            </a>
+            <a href="quiz.html" class="nav-link-standard">
+                <i class="fas fa-question"></i>
+                <span>Quiz</span>
+            </a>
+            <a href="/minha-conta" class="nav-link-standard">
+                <i class="fas fa-user-circle"></i>
+                <span>Minha conta</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="admin-header">
+                <h2><i class="fas fa-shield-alt"></i> Painel Administrativo</h2>
+                <p>Gerencie todos os dados dos participantes</p>
+            </div>
+
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="total-users">0</h3>
+                    <p>Total de Usuários</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3 id="total-carbon">0</h3>
+                    <p>Pegadas Calculadas</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3 id="total-quizzes">0</h3>
+                    <p>Quizzes Realizados</p>
+                </div>
+                <div class="admin-stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 id="avg-carbon">0</h3>
+                    <p>Média CO2 (kg)</p>
+                </div>
+            </div>
+
+            <div class="admin-controls">
+                <button id="refresh-data" class="btn btn-primary">
+                    <i class="fas fa-sync-alt"></i> Atualizar Dados
+                </button>
+                <button id="export-csv" class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Exportar CSV
+                </button>
+            </div>
+
+            <div class="admin-tables">
+                <div class="table-container">
+                    <h3><i class="fas fa-table"></i> Dados dos Participantes</h3>
+                    <div class="table-wrapper">
+                        <table id="participants-table" class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Data Cadastro</th>
+                                    <th>Pegada CO2 (kg)</th>
+                                    <th>Quiz Pontuação</th>
+                                    <th>Última Pegada</th>
+                                    <th>Último Quiz</th>
+                                    <th>Último Feedback</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="participants-tbody">
+                                <!-- Dados serão carregados via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <h3><i class="fas fa-comments"></i> Feedbacks dos Usuários</h3>
+                    <div class="table-wrapper">
+                        <table id="feedback-table" class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Usuário</th>
+                                    <th>Avaliação</th>
+                                    <th>Comentário</th>
+                                    <th>Quiz Score</th>
+                                    <th>Data</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="feedback-tbody">
+                                <!-- Dados serão carregados via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-charts">
+                <div class="chart-container">
+                    <h3><i class="fas fa-chart-pie"></i> Distribuição de Pegadas de Carbono</h3>
+                    <canvas id="carbon-chart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 VERDETECH. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="notifications.js"></script>
+    <script src="gamification.js"></script>
+    <script src="tutorial.js"></script>
+    <script src="admin-secret.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
